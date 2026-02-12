@@ -1,0 +1,46 @@
+2026-02-12 15:32:03,827 - __main__ - INFO - Connecting to database: sqlite+aiosqlite:///../backend/poc.db
+2026-02-12 15:32:03,830 - __main__ - INFO - Database connection established
+2026-02-12 15:32:03,830 - __main__ - INFO - Connecting to Kafka: localhost:9092, topic: provision-requests, group: provision-worker-group
+2026-02-12 15:32:03,830 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'provision-requests'})
+2026-02-12 15:32:03,831 - __main__ - INFO - Kafka consumer initialized (connection pending)
+2026-02-12 15:32:03,831 - __main__ - INFO - 🚀 Worker started...
+2026-02-12 15:32:03,836 - aiokafka - ERROR - Unable connect to "localhost:9092": Multiple exceptions: [Errno 61] Connect call failed ('127.0.0.1', 9092), [Errno 61] Connect call failed ('::1', 9092, 0, 0)
+2026-02-12 15:32:03,836 - __main__ - WARNING - ⚠️ Kafka unavailable: KafkaConnectionError: Unable to bootstrap from [('localhost', 9092, <AddressFamily.AF_UNSPEC: 0>)]
+2026-02-12 15:32:03,836 - __main__ - INFO - 🔄 Switching to DB POLLING MODE (Mock Flow)
+2026-02-12 15:32:03,836 - __main__ - INFO - Started DB Polling Loop - checking every 2 seconds...
+2026-02-12 15:32:03,838 - __main__ - INFO - 📥 Found pending request via polling: d64293b5-58e0-49e3-bac5-3003807902d1
+2026-02-12 15:32:03,838 - __main__ - INFO - Processing provision request: d64293b5-58e0-49e3-bac5-3003807902d1 (user=alice, gpus=4, duration=2h)
+2026-02-12 15:32:03,840 - __main__ - INFO - Updated request d64293b5-58e0-49e3-bac5-3003807902d1 to status: provisioning
+2026-02-12 15:32:03,841 - __main__ - INFO - Simulating provisioning work for 5 seconds...
+2026-02-12 15:32:08,847 - __main__ - INFO - Updated request d64293b5-58e0-49e3-bac5-3003807902d1 to status: completed
+2026-02-12 15:32:08,847 - __main__ - INFO - ✅ Successfully provisioned request d64293b5-58e0-49e3-bac5-3003807902d1 for user alice
+2026-02-12 15:32:08,847 - __main__ - INFO - 📥 Found pending request via polling: a9e59e05-e14d-4b46-90a1-4ef825eda2d1
+2026-02-12 15:32:08,847 - __main__ - INFO - Processing provision request: a9e59e05-e14d-4b46-90a1-4ef825eda2d1 (user=Heillo, gpus=4, duration=2h)
+2026-02-12 15:32:08,850 - __main__ - INFO - Updated request a9e59e05-e14d-4b46-90a1-4ef825eda2d1 to status: provisioning
+2026-02-12 15:32:08,850 - __main__ - INFO - Simulating provisioning work for 5 seconds...
+2026-02-12 15:32:13,855 - __main__ - INFO - Updated request a9e59e05-e14d-4b46-90a1-4ef825eda2d1 to status: completed
+2026-02-12 15:32:13,855 - __main__ - INFO - ✅ Successfully provisioned request a9e59e05-e14d-4b46-90a1-4ef825eda2d1 for user Heillo
+2026-02-12 15:32:13,855 - __main__ - INFO - 📥 Found pending request via polling: f5b60a80-39e5-4e68-b9ba-e9d667dbadc3
+2026-02-12 15:32:13,855 - __main__ - INFO - Processing provision request: f5b60a80-39e5-4e68-b9ba-e9d667dbadc3 (user=testuser, gpus=8, duration=1h)
+2026-02-12 15:32:13,857 - __main__ - INFO - Updated request f5b60a80-39e5-4e68-b9ba-e9d667dbadc3 to status: provisioning
+2026-02-12 15:32:13,857 - __main__ - INFO - Simulating provisioning work for 5 seconds...
+2026-02-12 15:32:18,860 - __main__ - INFO - Updated request f5b60a80-39e5-4e68-b9ba-e9d667dbadc3 to status: completed
+2026-02-12 15:32:18,860 - __main__ - INFO - ✅ Successfully provisioned request f5b60a80-39e5-4e68-b9ba-e9d667dbadc3 for user testuser
+2026-02-12 15:32:18,860 - __main__ - INFO - 📥 Found pending request via polling: 97978c19-ace2-49c6-b9b4-66d8dde1cb2c
+2026-02-12 15:32:18,860 - __main__ - INFO - Processing provision request: 97978c19-ace2-49c6-b9b4-66d8dde1cb2c (user=dsa, gpus=4, duration=2h)
+2026-02-12 15:32:18,861 - __main__ - INFO - Updated request 97978c19-ace2-49c6-b9b4-66d8dde1cb2c to status: provisioning
+2026-02-12 15:32:18,861 - __main__ - INFO - Simulating provisioning work for 5 seconds...
+2026-02-12 15:32:23,877 - __main__ - INFO - Updated request 97978c19-ace2-49c6-b9b4-66d8dde1cb2c to status: completed
+2026-02-12 15:32:23,878 - __main__ - INFO - ✅ Successfully provisioned request 97978c19-ace2-49c6-b9b4-66d8dde1cb2c for user dsa
+2026-02-12 15:33:29,986 - __main__ - INFO - 📥 Found pending request via polling: 25ef3812-9688-43df-b7ef-bfa8970c0dd5
+2026-02-12 15:33:29,986 - __main__ - INFO - Processing provision request: 25ef3812-9688-43df-b7ef-bfa8970c0dd5 (user=dsa, gpus=3, duration=1h)
+2026-02-12 15:33:29,988 - __main__ - INFO - Updated request 25ef3812-9688-43df-b7ef-bfa8970c0dd5 to status: provisioning
+2026-02-12 15:33:29,989 - __main__ - INFO - Simulating provisioning work for 5 seconds...
+2026-02-12 15:33:34,994 - __main__ - INFO - Updated request 25ef3812-9688-43df-b7ef-bfa8970c0dd5 to status: completed
+2026-02-12 15:33:34,995 - __main__ - INFO - ✅ Successfully provisioned request 25ef3812-9688-43df-b7ef-bfa8970c0dd5 for user dsa
+2026-02-12 16:19:28,586 - __main__ - INFO - 📥 Found pending request via polling: 06ffcb31-88b5-4266-ab47-6b13ec35f934
+2026-02-12 16:19:28,587 - __main__ - INFO - Processing provision request: 06ffcb31-88b5-4266-ab47-6b13ec35f934 (user=dsa, gpus=4, duration=8h)
+2026-02-12 16:19:28,589 - __main__ - INFO - Updated request 06ffcb31-88b5-4266-ab47-6b13ec35f934 to status: provisioning
+2026-02-12 16:19:28,589 - __main__ - INFO - Simulating provisioning work for 5 seconds...
+2026-02-12 16:19:33,592 - __main__ - INFO - Updated request 06ffcb31-88b5-4266-ab47-6b13ec35f934 to status: completed
+2026-02-12 16:19:33,593 - __main__ - INFO - ✅ Successfully provisioned request 06ffcb31-88b5-4266-ab47-6b13ec35f934 for user dsa
