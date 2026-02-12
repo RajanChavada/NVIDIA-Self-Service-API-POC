@@ -35,7 +35,6 @@ interface MetricDetailModalProps {
 // 1. Active GPU Nodes Data
 const generateActiveNodes = () => {
     const clusters = ['DGX-A100-East', 'DGX-H100-West', 'DGX-B200-Central'];
-    const statuses = ['Active', 'Idle', 'Maintenance', 'Drain'];
     const users = ['alice', 'bob', 'charlie', 'dave', 'eve', 'system'];
     const gpuTypes = { 'DGX-A100-East': 'A100 80GB', 'DGX-H100-West': 'H100 80GB', 'DGX-B200-Central': 'B200 192GB' };
 

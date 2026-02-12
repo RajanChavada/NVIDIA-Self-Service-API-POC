@@ -17,12 +17,6 @@ import MetricDetailModal, { type KPI } from '../components/MetricDetailModal';
 // ───────────────────────────── MOCK DATA ─────────────────────────────
 // Context: NVIDIA Global Testing Laboratory managing 3 GPU clusters
 
-const CLUSTERS = [
-    { name: 'DGX-A100-East', gpu: 'A100 80GB', color: '#76B900' },
-    { name: 'DGX-H100-West', gpu: 'H100 80GB', color: '#00D4AA' },
-    { name: 'DGX-B200-Central', gpu: 'B200 192GB', color: '#FFB800' },
-];
-
 // KPI data with sparkline trends
 const clusterKPIs: KPI[] = [
     {

@@ -9,10 +9,8 @@ import {
     Grid,
 } from '@mui/material';
 import {
-    CheckCircle as CheckCircleIcon,
     Memory as MemoryIcon,
     Speed as SpeedIcon,
-    Storage as StorageIcon,
 } from '@mui/icons-material';
 import { LineChart } from '@mui/x-charts/LineChart';
 import { PieChart } from '@mui/x-charts/PieChart';
@@ -62,7 +60,6 @@ const clusters = [
 
 const totalGPUs = clusters.reduce((sum, c) => sum + c.total, 0);
 const allocatedGPUs = clusters.reduce((sum, c) => sum + c.allocated, 0);
-const availableGPUs = clusters.reduce((sum, c) => sum + c.available, 0);
 
 // KPIs
 const quotaKPIs = [
@@ -142,7 +139,7 @@ export default function QuotaPage() {
                                             <Chip label={kpi.trendLabel} size="small" color="success" sx={{ fontWeight: 600, fontSize: '0.7rem', height: 22 }} />
                                         </Box>
                                         <Box sx={{ mt: 1, height: 30 }}>
-                                            <SparkLineChart data={kpi.trend} height={30} colors={['#76B900']} area />
+                                            <SparkLineChart data={kpi.trend} height={30} area />
                                         </Box>
                                     </CardContent>
                                 </MotionCard>
