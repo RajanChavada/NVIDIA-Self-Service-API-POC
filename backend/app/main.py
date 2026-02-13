@@ -63,3 +63,8 @@ app.include_router(requests_router, prefix="/api/v1")
 @app.get("/health", tags=["health"])
 async def health_check():
     return {"status": "ok"}
+
+
+@app.get("/", include_in_schema=False)
+async def root():
+    return {"message": "NVIDIA Self-Service API POC", "docs": "/docs"}

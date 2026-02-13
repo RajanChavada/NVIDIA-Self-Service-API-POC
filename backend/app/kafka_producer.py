@@ -36,6 +36,8 @@ class KafkaProducerService:
                 settings.KAFKA_BOOTSTRAP_SERVERS,
                 exc,
             )
+            if self._producer:
+                await self._producer.stop()
             self._producer = None
 
     async def stop(self) -> None:
